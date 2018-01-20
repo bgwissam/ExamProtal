@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Exam Protal</string>
+
+    <!-- String values for the check box questions -->
+
+    <string name="devil_prada">The Devil Wears Prada</string>
+    <string name="the_guardians">The Guardians</string>
+    <string name="love_drugs">Love and Other Drugs</string>
+    <string name="gravity">Gravity</string>
+</resources>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.examprotal.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Test your SKills"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/questions"
+            android:text="Which year did the USA land on the moon?"/>
+        <EditText
+            android:id="@+id/free_text_view"
+            style="@style/answers"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"/>
+        <TextView
+            style="@style/questions"
+            android:text="Which of the following is an effective sales techniqe?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q1_a1_radio_button"
+                style="@style/answers"
+
+                android:text="closed ended questions" />
+
+            <RadioButton
+                android:id="@+id/q1_a2_radio_button"
+                style="@style/answers"
+
+                android:text="open ended questions" />
+
+            <RadioButton
+                android:id="@+id/q1_a3_radio_button"
+                style="@style/answers"
+
+                android:text="daily sales meetings" />
+
+            <RadioButton
+                android:id="@+id/q1_a4_radio_button"
+                style="@style/answers"
+
+                android:text="daily sales reports" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="Which year, month, and day did WW2 end?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q2_a1_radio_button"
+                style="@style/answers"
+                android:onClick="Q2check"
+                android:text="October 13, 1945" />
+
+            <RadioButton
+                android:id="@+id/q2_a2_radio_button"
+                style="@style/answers"
+                android:onClick="Q2check"
+                android:text="July 2, 1945" />
+
+            <RadioButton
+                android:id="@+id/q2_a3_radio_button"
+                style="@style/answers"
+                android:onClick="Q2check"
+                android:text="November 13, 1945" />
+
+            <RadioButton
+                android:id="@+id/q2_a4_radio_button"
+                style="@style/answers"
+                android:onClick="Q2check"
+                android:text="September 2, 1945" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="What is the heaviest element ever discovered?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q3_a1_radio_button"
+                style="@style/answers"
+                android:onClick="Q3check"
+                android:text="Hydrogen" />
+
+            <RadioButton
+                android:id="@+id/q3_a2_radio_button"
+                style="@style/answers"
+                android:onClick="Q3check"
+                android:text="Berylium" />
+
+            <RadioButton
+                android:id="@+id/q3_a3_radio_button"
+                style="@style/answers"
+                android:onClick="Q3check"
+                android:text="Uranium" />
+
+            <RadioButton
+                android:id="@+id/q3_a4_radio_button"
+                style="@style/answers"
+                android:onClick="Q3check"
+                android:text="Iridium" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="what was the first source of energy ever used?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q4_a1_radio_button"
+                style="@style/answers"
+                android:onClick="Q4check"
+                android:text="Wood" />
+
+            <RadioButton
+                android:id="@+id/q4_a2_radio_button"
+                style="@style/answers"
+                android:onClick="Q4check"
+                android:text="Fossil fuel coal" />
+
+            <RadioButton
+                android:id="@+id/q4_a3_radio_button"
+                style="@style/answers"
+                android:onClick="Q4check"
+                android:text="Oil" />
+
+            <RadioButton
+                android:id="@+id/q4_a4_radio_button"
+                style="@style/answers"
+                android:onClick="Q4check"
+                android:text="Coal" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="What is the main purpose of profit organizations?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q5_a1_radio_button"
+                style="@style/answers"
+                android:onClick="Q5check"
+                android:text="Bring people together to live in harmony and peace" />
+
+            <RadioButton
+                android:id="@+id/q5_a2_radio_button"
+                style="@style/answers"
+                android:onClick="Q5check"
+                android:text="help the countries to become more developed" />
+
+            <RadioButton
+                android:id="@+id/q5_a3_radio_button"
+                style="@style/answers"
+                android:onClick="Q5check"
+                android:text="generate profit for the owners" />
+
+            <RadioButton
+                android:id="@+id/q5_a4_radio_button"
+                style="@style/answers"
+                android:onClick="Q5check"
+                android:text="provide jobs for the community" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="Who won the soccer world cup in 1994" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q6_a1_radio_button"
+                style="@style/answers"
+                android:onClick="Q6check"
+                android:text="Brazil" />
+
+            <RadioButton
+                android:id="@+id/q6_a2_radio_button"
+                style="@style/answers"
+                android:onClick="Q6check"
+                android:text="Germany" />
+
+            <RadioButton
+                android:id="@+id/q6_a3_radio_button"
+                style="@style/answers"
+                android:onClick="Q6check"
+                android:text="Argentina" />
+
+            <RadioButton
+                android:id="@+id/q6_a4_radio_button"
+                style="@style/answers"
+                android:onClick="Q6check"
+                android:text="Italy" />
+        </RadioGroup>
+        <TextView
+            style="@style/questions"
+            android:text="In which of those movies did Ann Hathway star?"/>
+        <CheckBox
+            android:id="@+id/q7_a1_checkbox"
+            style="@style/answers"
+            android:text="@string/devil_prada"
+            android:onClick="q7Checkright"
+            />
+        <CheckBox
+            android:id="@+id/q7_a2_checkbox"
+            style="@style/answers"
+            android:text="@string/gravity"
+            />
+        <CheckBox
+            android:id="@+id/q7_a3_checkbox"
+            style="@style/answers"
+            android:text="@string/love_drugs"
+            android:onClick="q7Checkright"
+            />
+        <CheckBox
+            android:id="@+id/q7_a4_checkbox"
+            style="@style/answers"
+            android:text="@string/the_guardians"
+           />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimary"
+            android:onClick="submitAnswers"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+</ScrollView>
