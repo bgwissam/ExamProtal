@@ -1,5 +1,6 @@
 package com.example.android.examprotal;
 
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,37 +12,28 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static String LOG_TAG = MainActivity.class.getName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    int rightAnswerCountrer;
-    int wrongAnswerCounter;
-    boolean isCheckedOne;
+    int rightAnswerCountrer = 0;
+    int wrongAnswerCounter =0;
     /*
     Check which button is checked in the first question and compare to the right answer
      */
     public void Q1check(View view) {
         //will check with radio button is checked
-        isCheckedOne = ((RadioButton) view).isChecked();
+        RadioButton questionOne = findViewById(R.id.q1_a2_radio_button);
         //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q1_a1_radio_button:
-                if (isCheckedOne)
-                    break;
-            case R.id.q1_a2_radio_button:
-                if (isCheckedOne) {
-                    rightAnswerCountrer++;
-                    break;
-                }
-            case R.id.q1_a3_radio_button:
-                if (isCheckedOne)
-                    break;
-            case R.id.q1_a4_radio_button:
-                if (isCheckedOne)
-                    break;
+        if(questionOne.isChecked()){
+            rightAnswerCountrer++;
+        }
+        else{
+            wrongAnswerCounter++;
         }
     }
 
@@ -50,23 +42,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void Q2check(View view) {
         //will check with radio button is checked
-       boolean isChecked = ((RadioButton) view).isChecked();
+       RadioButton questionTwo = findViewById(R.id.q2_a4_radio_button);
         //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q2_a1_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q2_a2_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q2_a3_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q2_a4_radio_button:
-                if (isChecked) {
-                    rightAnswerCountrer++;
-                    break;
-                }
+        if(questionTwo.isChecked()){
+            rightAnswerCountrer++;
+        }
+        else{
+            wrongAnswerCounter++;
         }
     }
 
@@ -75,23 +57,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void Q3check(View view) {
         //will check with radio button is checked
-       boolean isChecked = ((RadioButton) view).isChecked();
+        RadioButton questionThree = findViewById(R.id.q3_a3_radio_button);
         //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q3_a1_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q3_a2_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q3_a3_radio_button:
-                if (isChecked) {
-                    rightAnswerCountrer++;
-                    break;
-                }
-            case R.id.q3_a4_radio_button:
-                if (isChecked)
-                    break;
+        if(questionThree.isChecked()){
+            rightAnswerCountrer++;
+
+        }
+        else{
+            wrongAnswerCounter++;
+
         }
     }
 
@@ -100,23 +74,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void Q4check(View view) {
         //will check with radio button is checked
-        boolean isChecked = ((RadioButton) view).isChecked();
-        //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q4_a1_radio_button:
-                if (isChecked) {
-                    rightAnswerCountrer++;
-                    break;
-                }
-            case R.id.q4_a2_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q4_a3_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q4_a4_radio_button:
-                if (isChecked)
-                    break;
+        RadioButton questionFour = findViewById(R.id.q4_a1_radio_button);
+
+        if(questionFour.isChecked()){
+            rightAnswerCountrer++;
+
+        }
+        else{
+            wrongAnswerCounter++;
         }
     }
 
@@ -125,23 +90,13 @@ public class MainActivity extends AppCompatActivity {
    */
     public void Q5check(View view) {
         //will check with radio button is checked
-        boolean isChecked = ((RadioButton) view).isChecked();
-        //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q5_a1_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q5_a2_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q5_a3_radio_button:
-                if (isChecked) {
-                    rightAnswerCountrer++;
-                    break;
-                }
-            case R.id.q5_a4_radio_button:
-                if (isChecked)
-                    break;
+        RadioButton questionFive = findViewById(R.id.q5_a3_radio_button);
+
+        if(questionFive.isChecked()){
+            rightAnswerCountrer++;
+        }
+        else{
+            wrongAnswerCounter++;
         }
     }
 
@@ -150,45 +105,29 @@ Check which button is checked in the sixth question and compare to the right ans
 */
     public void Q6check(View view) {
         //will check with radio button is checked
-        boolean isChecked = ((RadioButton) view).isChecked();
-        //switch statment will go over all 4 answers an define which is the right
-        switch (view.getId()) {
-            case R.id.q6_a1_radio_button:
-                if (isChecked) {
-                    rightAnswerCountrer++;
-                    break;
-                }
-            case R.id.q6_a2_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q6_a3_radio_button:
-                if (isChecked)
-                    break;
-            case R.id.q6_a4_radio_button:
-                if (isChecked)
-                    break;
+        RadioButton questionSix = findViewById(R.id.q6_a1_radio_button);
+
+        if(questionSix.isChecked()){
+            rightAnswerCountrer++;
+
+        }
+        else{
+            wrongAnswerCounter++;
         }
     }
 
     public void q7Checkright (View view) {
 
-        boolean isChecked = ((CheckBox) view).isChecked();
+        CheckBox optionOne = findViewById(R.id.q7_a1_checkbox);
+        CheckBox optionTwo = findViewById(R.id.q7_a3_checkbox);
 
-        view.getId();
-        if(isChecked)
+        if(optionOne.isChecked() && optionTwo.isChecked()){
             rightAnswerCountrer++;
-
+        }
+        else {
+            wrongAnswerCounter++;
+        }
     }
-
-//    public void q7Checkwrong (View view){
-//
-//        boolean isChecked = ((CheckBox) view).isChecked();
-//
-//        view.getId();
-//        if(isChecked)
-//            wrongAnswerCounter++;
-//    }
-
 
     /*
     This method will check the answer of the free text view
@@ -198,13 +137,17 @@ Check which button is checked in the sixth question and compare to the right ans
         int wrongAnswerColor = getResources().getColor(R.color.Red);
 
         EditText moonLanding = findViewById(R.id.free_text_view);
-        String theAnswer = String.valueOf(moonLanding.getText());
-        Log.i("The Answer", theAnswer);
-        if(theAnswer.equals("1969"))
+        String theAnswer = moonLanding.getText().toString().trim();
+
+        if(theAnswer.equals("1969")) {
             rightAnswerCountrer++;
+        }
         else{
+
+            moonLanding.getText().clear();
             moonLanding.setTextColor(wrongAnswerColor);
-            moonLanding.setText(theAnswer + " is wrong 1969 is the right Answer");
+            moonLanding.setText("1969 is the right Answer");
+            wrongAnswerCounter++;
         }
 
     }
@@ -214,23 +157,24 @@ Check which button is checked in the sixth question and compare to the right ans
      */
     public void submitAnswers(View view) {
         Q1check(view);
-//        Q2check(view);
-//        Q3check(view);
-//        Q4check(view);
-//        Q5check(view);
-//        Q6check(view);
-//        q7Checkright(view);
-
+        Q2check(view);
+        Q3check(view);
+        Q4check(view);
+        Q5check(view);
+        Q6check(view);
+        q7Checkright(view);
         freeTextEntry();
-        if (rightAnswerCountrer == 9)
-            Toast.makeText(this, "Congratulations you have all 9 questions right!!", Toast.LENGTH_LONG).show();
-        else if (rightAnswerCountrer > 2 && rightAnswerCountrer < 9)
-            Toast.makeText(this, "You need to work harder on your skills, you have " + rightAnswerCountrer + " right and " + (9 - rightAnswerCountrer) + " Wrong answers", Toast.LENGTH_LONG).show();
+
+        if (rightAnswerCountrer == 8)
+            Toast.makeText(this, "Congratulations you have all 8 questions right!!", Toast.LENGTH_LONG).show();
+        else if (rightAnswerCountrer > 2 && rightAnswerCountrer < 8)
+            Toast.makeText(this, "You need to work harder on your skills, you have " + rightAnswerCountrer + " right and " + wrongAnswerCounter + " Wrong answers", Toast.LENGTH_LONG).show();
         else if (rightAnswerCountrer < 2)
-            Toast.makeText(this, "Oh!! Sorry you have " + (9 - rightAnswerCountrer) + " answers wrong and " + rightAnswerCountrer + " answer right!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Oh!! Sorry you have " + rightAnswerCountrer + " answers wrong and " + wrongAnswerCounter + " answer right!", Toast.LENGTH_LONG).show();
         //calling method to change color
         ChangeColor();
         rightAnswerCountrer = 0;
+        wrongAnswerCounter = 0;
     }
 
 

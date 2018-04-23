@@ -38,7 +38,6 @@
             <RadioButton
                 android:id="@+id/q1_a1_radio_button"
                 style="@style/answers"
-
                 android:text="closed ended questions" />
 
             <RadioButton
@@ -71,25 +70,21 @@
             <RadioButton
                 android:id="@+id/q2_a1_radio_button"
                 style="@style/answers"
-                android:onClick="Q2check"
                 android:text="October 13, 1945" />
 
             <RadioButton
                 android:id="@+id/q2_a2_radio_button"
                 style="@style/answers"
-                android:onClick="Q2check"
                 android:text="July 2, 1945" />
 
             <RadioButton
                 android:id="@+id/q2_a3_radio_button"
                 style="@style/answers"
-                android:onClick="Q2check"
                 android:text="November 13, 1945" />
 
             <RadioButton
                 android:id="@+id/q2_a4_radio_button"
                 style="@style/answers"
-                android:onClick="Q2check"
                 android:text="September 2, 1945" />
         </RadioGroup>
 
@@ -104,25 +99,21 @@
             <RadioButton
                 android:id="@+id/q3_a1_radio_button"
                 style="@style/answers"
-                android:onClick="Q3check"
                 android:text="Hydrogen" />
 
             <RadioButton
                 android:id="@+id/q3_a2_radio_button"
                 style="@style/answers"
-                android:onClick="Q3check"
                 android:text="Berylium" />
 
             <RadioButton
                 android:id="@+id/q3_a3_radio_button"
                 style="@style/answers"
-                android:onClick="Q3check"
                 android:text="Uranium" />
 
             <RadioButton
                 android:id="@+id/q3_a4_radio_button"
                 style="@style/answers"
-                android:onClick="Q3check"
                 android:text="Iridium" />
         </RadioGroup>
 
@@ -137,13 +128,11 @@
             <RadioButton
                 android:id="@+id/q4_a1_radio_button"
                 style="@style/answers"
-                android:onClick="Q4check"
                 android:text="Wood" />
 
             <RadioButton
                 android:id="@+id/q4_a2_radio_button"
                 style="@style/answers"
-                android:onClick="Q4check"
                 android:text="Fossil fuel coal" />
 
             <RadioButton
@@ -155,7 +144,6 @@
             <RadioButton
                 android:id="@+id/q4_a4_radio_button"
                 style="@style/answers"
-                android:onClick="Q4check"
                 android:text="Coal" />
         </RadioGroup>
 
@@ -170,25 +158,21 @@
             <RadioButton
                 android:id="@+id/q5_a1_radio_button"
                 style="@style/answers"
-                android:onClick="Q5check"
                 android:text="Bring people together to live in harmony and peace" />
 
             <RadioButton
                 android:id="@+id/q5_a2_radio_button"
                 style="@style/answers"
-                android:onClick="Q5check"
                 android:text="help the countries to become more developed" />
 
             <RadioButton
                 android:id="@+id/q5_a3_radio_button"
                 style="@style/answers"
-                android:onClick="Q5check"
                 android:text="generate profit for the owners" />
 
             <RadioButton
                 android:id="@+id/q5_a4_radio_button"
                 style="@style/answers"
-                android:onClick="Q5check"
                 android:text="provide jobs for the community" />
         </RadioGroup>
 
@@ -203,25 +187,21 @@
             <RadioButton
                 android:id="@+id/q6_a1_radio_button"
                 style="@style/answers"
-                android:onClick="Q6check"
                 android:text="Brazil" />
 
             <RadioButton
                 android:id="@+id/q6_a2_radio_button"
                 style="@style/answers"
-                android:onClick="Q6check"
                 android:text="Germany" />
 
             <RadioButton
                 android:id="@+id/q6_a3_radio_button"
                 style="@style/answers"
-                android:onClick="Q6check"
                 android:text="Argentina" />
 
             <RadioButton
                 android:id="@+id/q6_a4_radio_button"
                 style="@style/answers"
-                android:onClick="Q6check"
                 android:text="Italy" />
         </RadioGroup>
         <TextView
@@ -231,7 +211,6 @@
             android:id="@+id/q7_a1_checkbox"
             style="@style/answers"
             android:text="@string/devil_prada"
-            android:onClick="q7Checkright"
             />
         <CheckBox
             android:id="@+id/q7_a2_checkbox"
@@ -242,7 +221,6 @@
             android:id="@+id/q7_a3_checkbox"
             style="@style/answers"
             android:text="@string/love_drugs"
-            android:onClick="q7Checkright"
             />
         <CheckBox
             android:id="@+id/q7_a4_checkbox"
