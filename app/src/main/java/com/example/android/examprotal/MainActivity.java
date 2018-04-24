@@ -1,9 +1,6 @@
 package com.example.android.examprotal;
-
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -119,9 +116,11 @@ Check which button is checked in the sixth question and compare to the right ans
     public void q7Checkright (View view) {
 
         CheckBox optionOne = findViewById(R.id.q7_a1_checkbox);
-        CheckBox optionTwo = findViewById(R.id.q7_a3_checkbox);
+        CheckBox optionTwo = findViewById(R.id.q7_a2_checkbox);
+        CheckBox optionThree = findViewById(R.id.q7_a3_checkbox);
+        CheckBox optionFour = findViewById(R.id.q7_a4_checkbox);
 
-        if(optionOne.isChecked() && optionTwo.isChecked()){
+        if(optionOne.isChecked() && optionThree.isChecked() && !optionTwo.isChecked() & !optionFour.isChecked() ){
             rightAnswerCountrer++;
         }
         else {
@@ -139,7 +138,7 @@ Check which button is checked in the sixth question and compare to the right ans
         EditText moonLanding = findViewById(R.id.free_text_view);
         String theAnswer = moonLanding.getText().toString().trim();
 
-        if(theAnswer.equals("1969")) {
+        if(theAnswer.equalsIgnoreCase("1969")) {
             rightAnswerCountrer++;
         }
         else{
@@ -170,7 +169,7 @@ Check which button is checked in the sixth question and compare to the right ans
         else if (rightAnswerCountrer > 2 && rightAnswerCountrer < 8)
             Toast.makeText(this, "You need to work harder on your skills, you have " + rightAnswerCountrer + " right and " + wrongAnswerCounter + " Wrong answers", Toast.LENGTH_LONG).show();
         else if (rightAnswerCountrer < 2)
-            Toast.makeText(this, "Oh!! Sorry you have " + rightAnswerCountrer + " answers wrong and " + wrongAnswerCounter + " answer right!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Oh!! Sorry you have " + wrongAnswerCounter + " answers wrong and " + rightAnswerCountrer + " answer right!", Toast.LENGTH_LONG).show();
         //calling method to change color
         ChangeColor();
         rightAnswerCountrer = 0;
